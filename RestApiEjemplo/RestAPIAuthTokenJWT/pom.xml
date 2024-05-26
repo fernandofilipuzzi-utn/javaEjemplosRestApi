@@ -1,33 +1,60 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-        		
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ejemplos</groupId>
-	<artifactId>restapiauthtokenjwt</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-           
-    <properties>
-    	<java.version>17</java.version>
-	</properties>
-	
-	<parent>
+		
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ejemplos</groupId>
+  <artifactId>RestAPIAuthTokenJWT2</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  	<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.4.5</version>
     </parent>
       
-	<dependencies>
-	    <dependency>
+      
+      <properties>
+    	<java.version>17</java.version>
+	</properties>
+  <dependencies>
+    <!-- Spring Boot Starter 	
+    <dependency>
+        <groupId>org.springframework.boot</groupId>	
+        <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+    -->
+    <dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-web</artifactId>
 	    </dependency>
 	    
-	    <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-	</dependencies>
+    <!-- Spring Security -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <!-- JWT Library -->
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.9.1</version> <!-- Use the latest version available -->
+    </dependency>
+    
+  <!-- API, java.xml.bind module -->
+<dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api</artifactId>
+    <version>2.3.2</version>
+</dependency>
+
+<!-- Runtime, com.sun.xml.bind module -->
+<dependency>
+    <groupId>org.glassfish.jaxb</groupId>
+    <artifactId>jaxb-runtime</artifactId>
+    <version>2.3.2</version>
+</dependency>
+</dependencies>
 	
 	<build>
 
@@ -37,6 +64,5 @@
 	            <artifactId>spring-boot-maven-plugin</artifactId>
 	        </plugin>
 	    </plugins>
-	</build>       
-	  
+	</build> 
 </project>
