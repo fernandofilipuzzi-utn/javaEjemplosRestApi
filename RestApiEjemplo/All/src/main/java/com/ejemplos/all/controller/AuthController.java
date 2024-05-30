@@ -1,4 +1,4 @@
-package com.ejemplos.restapiauthtokenjwt.controller;
+package com.ejemplos.all.controller;
 
 import java.util.Date;
 import java.util.Random;

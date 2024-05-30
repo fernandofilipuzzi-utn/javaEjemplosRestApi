@@ -5,8 +5,11 @@ package com.ejemplos.restapirepository.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "usuarios")
+@Entity
+@Table(name = "Usuarios")
 public class Usuario {
 
 	public int id;
@@ -19,7 +22,7 @@ public class Usuario {
 		this.clave = password;
 	}
 	
-	@javax.persistence.Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;
